@@ -1,0 +1,21 @@
+def show_result(time_taken, wpm, accuracy, errors):
+
+    print("\n================================")
+    print("          TEST RESULT")
+    print("================================")
+
+    print("Time Taken :", round(time_taken, 2), "seconds")
+    print("WPM        :", round(wpm, 2))
+    print("Accuracy   :", round(accuracy, 2), "%")
+    print("Errors     :", errors)
+
+    if accuracy >= 90:
+        print("Performance: Excellent!")
+
+    elif accuracy >= 70:
+        print("Performance: Good!")
+
+    else:
+        print("Performance: Keep Practicing!")
+
+    print("================================")

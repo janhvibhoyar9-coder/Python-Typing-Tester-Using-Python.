@@ -1,0 +1,35 @@
+import time
+
+def start_test(sentence):
+
+    print("\nType the following sentence:")
+    print(sentence)
+
+    input("\nPress Enter to start...")
+
+    start_time = time.time()
+
+    typed_text = input("\nStart typing: ")
+
+    end_time = time.time()
+
+    time_taken = end_time - start_time
+
+    words = len(typed_text.split())
+
+    if time_taken > 0:
+        wpm = (words / time_taken) * 60
+    else:
+        wpm = 0
+
+    correct = 0
+
+    for i in range(min(len(sentence), len(typed_text))):
+        if sentence[i] == typed_text[i]:
+            correct += 1
+
+    accuracy = (correct / len(sentence)) * 100
+
+    errors = len(sentence) - correct
+
+    return time_taken, wpm, accuracy, errors
