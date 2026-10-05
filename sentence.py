@@ -1,17 +1,12 @@
 import random
 
-# Typing passages
-passages = [
-    "Python is easy to learn and useful for many applications.",
-    "Practice makes a person perfect in typing speed and accuracy.",
-    "Programming helps us solve real world problems using logic."
+sentences = [
+    "Python is easy to learn and fun to use.",
+    "Practice makes a person perfect.",
+    "Typing speed improves with regular practice.",
+    "Learning programming helps us solve problems.",
+    "Technology makes our life easier."
 ]
 
-# Select a random passage
-text = random.choice(passages)
-
-print("TYPING TESTER USING PYTHON")
-print("\nType the following passage:\n")
-print(text)
-
-input("\nPress Enter to start the text...")
+def get_sentence():
+    return random.choice(sentences)
